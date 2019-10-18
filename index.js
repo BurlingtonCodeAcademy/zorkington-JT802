@@ -15,7 +15,7 @@ let states = {
   'roomThree': { canChangeTo: [ 'roomOne' ] }
 };
 
-let currentState = "green";
+let currentState = "roomOne";
 
 function enterState(newState) {
   let validTransitions = states[currentState].canChangeTo;
@@ -25,14 +25,14 @@ function enterState(newState) {
     throw 'Invalid state transition attempted - from ' + currentState + ' to ' + newState;
   }
 }
-
+//state machine from line 12-27 is NOT absolutely necessary!
 start();
 
 async function start() {
   const welcomeMessage = `182 Main St.
 You are standing on Main Street between Church and South Winooski.
 There is a door here. A keypad sits on the handle.
-On the door is a handwritten sign.`;
+On the door is a handwritten sign. \n>_`;
   let answer = await ask(welcomeMessage);
   console.log('Now write your code to make this work!');
   process.exit();
