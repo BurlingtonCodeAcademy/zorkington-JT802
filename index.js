@@ -92,7 +92,7 @@ apartMent.message = () => {
 }
 
 function enterRoom(room) {
-  room.message(); //borrowed function from Bob, because it reads so simply
+  room.message(); //from project instructions
 }
 
 startGame();
